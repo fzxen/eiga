@@ -1,0 +1,23 @@
+.container {
+  height: 100vh;
+  background-image: linear-gradient(
+      -58deg,
+      rgba(88, 124, 179, 0.05) 0%,
+      rgba(239, 240, 231, 0.05) 100%
+    ),
+    linear-gradient(#e9f0f2, #e9f0f2);
+  overflow: auto;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// reset
+ul,
+ol,
+dl {
+  list-style: none;
+}
