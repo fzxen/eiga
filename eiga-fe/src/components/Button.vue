@@ -27,7 +27,7 @@ export default {
 
 <style lang="scss">
 .button-wrap {
-  width: 305px;
+  // width: 305px;
   height: 61px;
   &.primary-btn {
     background-image: linear-gradient(165deg, #00b3c6 0%, #5d84b4 100%),

@@ -60,9 +60,11 @@ export default {
     margin-top: 32px;
   }
   .top-btn {
+    width: 80%;
     margin-top: 30px;
   }
   .bottom-btn {
+    width: 80%;
     margin-top: 10px;
   }
 }
