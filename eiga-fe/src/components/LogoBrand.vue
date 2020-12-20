@@ -43,6 +43,7 @@ export default {
     display: flex;
     flex-direction: column;
     margin-left: 16px;
+    justify-content: space-between;
 
     .top {
       font-family: Montserrat-Bold;
