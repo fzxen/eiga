@@ -92,6 +92,11 @@ export default {
     .release {
       position: absolute;
       left: 20px;
+      overflow: hidden;
+      display: inline-block;
+      width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
     .title {
       bottom: 40px;
