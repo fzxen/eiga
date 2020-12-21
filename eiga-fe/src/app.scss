@@ -9,7 +9,7 @@
   overflow: auto;
 }
 .tab-container {
-  height: 90.5vh;
+  height: 100vh;
   background-image: linear-gradient(
       -58deg,
       rgba(88, 124, 179, 0.05) 0%,
@@ -18,6 +18,7 @@
     linear-gradient(#e9f0f2, #e9f0f2);
   overflow: auto;
   padding-bottom: 70px;
+  box-sizing: border-box;
 }
 
 .flex-center {

@@ -20,6 +20,8 @@ import {} from "@tarojs/taro";
 export default {
   name: "CardList",
 
+  components: {},
+
   props: {
     type: {
       type: String,
@@ -40,6 +42,7 @@ export default {
 
 <style lang="scss">
 .card-wrap {
+  padding: 0 16px;
   &.grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -69,15 +72,12 @@ export default {
   }
   &.line {
     .card {
-      &:not(:first-of-type) {
-        margin-top: 16px;
-      }
+      margin-bottom: 16px;
     }
   }
   .card {
     position: relative;
     height: 160px;
-    overflow: hidden;
 
     .img-container {
       width: 100%;
@@ -86,6 +86,7 @@ export default {
       background-size: cover;
       background-position: center;
       border-radius: 10px;
+      box-shadow: 1px 5px 5px #cccccc;
     }
 
     .title,

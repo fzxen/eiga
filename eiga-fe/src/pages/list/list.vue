@@ -11,6 +11,12 @@
       </swiper-item>
     </swiper>
 
+    <MovieInfo
+      :class="{ show: isInfoShow }"
+      class="movie-info"
+      @on-hide="isInfoShow = false"
+    />
+
     <ETabBar />
   </view>
 </template>
@@ -19,11 +25,12 @@
 import { ref } from "vue";
 import Switcher from "../../components/Switcher.vue";
 import CardList from "./components/CardList.vue";
+import MovieInfo from "./components/MovieInfo.vue";
 
 export default {
   name: "List",
 
-  components: { Switcher, CardList },
+  components: { Switcher, CardList, MovieInfo },
 
   setup() {
     const btns = [
@@ -64,9 +71,10 @@ export default {
         release: "1 HR 47 MIN  PG"
       }
     ];
+    const isInfoShow = ref(false);
 
     const tabValue = ref(0);
-    return { tabValue, btns, cardData };
+    return { tabValue, btns, cardData, isInfoShow };
   }
 };
 </script>
@@ -76,20 +84,36 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 16px;
+  // padding: 0 16px;
 
   .switcher {
     margin-top: 40px;
+    padding: 0 16px;
   }
 
   .swiper {
     margin-top: 31px;
     width: 100%;
-    height: 83%;
+    height: 85%;
 
     .card-list {
       // flex: 1;
       height: 100%;
+    }
+  }
+
+  .movie-info {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: translateY(100vh);
+    transition: transform 0.3s ease-in;
+    z-index: 2;
+
+    &.show {
+      transform: translateY(0);
     }
   }
 }
