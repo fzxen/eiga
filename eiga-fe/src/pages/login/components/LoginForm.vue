@@ -10,18 +10,22 @@
     <view class="forget">
       <text @tap="$emit('on-show')">Forget Password?</text>
     </view>
-    <EButton class="e-btn">LOGIN</EButton>
+    <EButton class="e-btn" @tap="onLogin">LOGIN</EButton>
   </view>
 </template>
 
 <script lang="ts">
 import {} from "vue";
+import { navigateTo, switchTab } from "@tarojs/taro";
 
 export default {
   name: "LoginForm",
 
   setup() {
-    return {};
+    const onLogin = () => {
+      switchTab({ url: "../list/list" });
+    };
+    return { onLogin };
   }
 };
 </script>
