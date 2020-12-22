@@ -40,27 +40,27 @@ export default {
 
     const cardData = [
       {
-        cover: require("../../images/poster1.png"),
+        cover: require("_images/poster1.png"),
         title: "STAR WARS: THE LAST JEDI",
         release: "2 HR 32 MIN  PG13"
       },
       {
-        cover: require("../../images/poster2.png"),
+        cover: require("_images/poster2.png"),
         title: "JUSTICE LEAGUE",
         release: "1 HR 59 MIN  PG3"
       },
       {
-        cover: require("../../images/poster3.png"),
+        cover: require("_images/poster3.png"),
         title: "FERDINAND",
         release: "1 HR 47 MIN  PG"
       },
       {
-        cover: require("../../images/poster4.png"),
+        cover: require("_images/poster4.png"),
         title: "12 STRONG",
         release: "1 HR 47 MIN  PG"
       },
       {
-        cover: require("../../images/poster5.png"),
+        cover: require("_images/poster5.png"),
         title: "12 STRONG",
         release: "1 HR 47 MIN  PG"
       }

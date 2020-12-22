@@ -2,7 +2,7 @@
   <view class="movieinfo-wrap container">
     <image
       class="arrow"
-      src="../../../images/arrow_up.png"
+      src="~_images/arrow_up.png"
       @tap="$emit('on-hide')"
     />
   </view>

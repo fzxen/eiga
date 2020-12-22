@@ -1,6 +1,6 @@
 <template>
   <view class="welcome-landing container">
-    <image class="logo" src="../../images/EIGA_logo.png" />
+    <image class="logo" src="~_images/EIGA_logo.png" />
   </view>
 </template>
 

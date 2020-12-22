@@ -1,7 +1,7 @@
 <template>
   <view class="logobrand-wrap">
     <view class="brand flex-center">
-      <image src="../images/logo_a.png" />
+      <image src="~_images/logo_a.png" />
     </view>
     <view class="text">
       <text class="top">EIGA</text>

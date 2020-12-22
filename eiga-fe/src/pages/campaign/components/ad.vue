@@ -2,7 +2,7 @@
   <view class="ad-wrap">
     <view class="ad-inner" :style="{ transform: `translateX(-${num * 100}%)` }">
       <view class="list" v-for="i of count" :key="`li-${i}`">
-        <image class="onboarding" src="../../../images/icon_onboarding.png" />
+        <image class="onboarding" src="~_images/icon_onboarding.png" />
         <text class="main-title">ONBOARDING{{ i }}</text>
         <text class="sub-description"
           >Choose movies, watch trailers, take tickets.</text

@@ -20,18 +20,18 @@ export default {
     list: [
       {
         pagePath: "pages/list/list",
-        iconPath: "images/movie.png",
-        selectedIconPath: "images/movie_active.png"
+        iconPath: "./assets/images/movie.png",
+        selectedIconPath: "./assets/images/movie_active.png"
       },
       {
         pagePath: "pages/ticket/ticket",
-        iconPath: "images/ticket.png",
-        selectedIconPath: "images/ticket_active.png"
+        iconPath: "./assets/images/ticket.png",
+        selectedIconPath: "./assets/images/ticket_active.png"
       },
       {
         pagePath: "pages/me/me",
-        iconPath: "images/user.png",
-        selectedIconPath: "images/user_active.png"
+        iconPath: "./assets/images/user.png",
+        selectedIconPath: "./assets/images/user_active.png"
       }
     ]
   },

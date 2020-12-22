@@ -23,18 +23,18 @@ export default {
     const list = reactive([
       {
         pagePath: "/pages/list/list",
-        iconPath: "/images/movie.png",
-        selectedIconPath: "/images/movie_active.png"
+        iconPath: require("_images/movie.png"),
+        selectedIconPath: require("_images/movie_active.png")
       },
       {
         pagePath: "/pages/ticket/ticket",
-        iconPath: "/images/ticket.png",
-        selectedIconPath: "/images/ticket_active.png"
+        iconPath: require("_images/ticket.png"),
+        selectedIconPath: require("_images/ticket_active.png")
       },
       {
         pagePath: "/pages/me/me",
-        iconPath: "/images/user.png",
-        selectedIconPath: "/images/user_active.png"
+        iconPath: require("_images/user.png"),
+        selectedIconPath: require("_images/user_active.png")
       }
     ]);
 

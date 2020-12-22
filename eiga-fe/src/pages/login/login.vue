@@ -25,9 +25,9 @@
     </view>
 
     <view class="login-way">
-      <view class="flex-center"><image src="../../images/facebook.png"/></view>
-      <view class="flex-center"><image src="../../images/google.png"/></view>
-      <view class="flex-center"><image src="../../images/bird.png"/></view>
+      <view class="flex-center"><image src="~_images/facebook.png"/></view>
+      <view class="flex-center"><image src="~_images/google.png"/></view>
+      <view class="flex-center"><image src="~_images/bird.png"/></view>
     </view>
 
     <ResetForm :class="['reset-form', { show: isResetShow }]"  @on-hide="hideReset"/>

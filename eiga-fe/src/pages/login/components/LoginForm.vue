@@ -5,7 +5,7 @@
     </view>
     <view class="password">
       <input type="password" placeholder="Password" />
-      <image src="../../../images/eyes.png" />
+      <image src="~_images/eyes.png" />
     </view>
     <view class="forget">
       <text @tap="$emit('on-show')">Forget Password?</text>

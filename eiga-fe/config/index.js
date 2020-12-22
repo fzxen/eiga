@@ -1,3 +1,5 @@
+const path = require("path");
+
 const config = {
   projectName: "eiga-fe",
   date: "2020-12-19",
@@ -12,6 +14,11 @@ const config = {
   outputRoot: "dist",
   plugins: [],
   defineConstants: {},
+  alias: {
+    "@/": path.resolve(__dirname, "../src"),
+    _videos: path.resolve(__dirname, "../src/assets/videos"),
+    _images: path.resolve(__dirname, "../src/assets/images")
+  },
   copy: {
     patterns: [],
     options: {}
