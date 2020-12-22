@@ -4,18 +4,12 @@
 
     <swiper class="swiper" :current="tabValue">
       <swiper-item>
-        <CardList class="card-list" :data="cardData" />
+        <CardList class="card-list" :data="cardData" @on-tap="onTap" />
       </swiper-item>
       <swiper-item>
         <CardList class="card-list" type="grid" :data="cardData" />
       </swiper-item>
     </swiper>
-
-    <MovieInfo
-      :class="{ show: isInfoShow }"
-      class="movie-info"
-      @on-hide="isInfoShow = false"
-    />
 
     <ETabBar />
   </view>
@@ -25,12 +19,12 @@
 import { ref } from "vue";
 import Switcher from "../../components/Switcher.vue";
 import CardList from "./components/CardList.vue";
-import MovieInfo from "./components/MovieInfo.vue";
+import { navigateTo } from "@tarojs/taro";
 
 export default {
   name: "List",
 
-  components: { Switcher, CardList, MovieInfo },
+  components: { Switcher, CardList },
 
   setup() {
     const btns = [
@@ -74,7 +68,11 @@ export default {
     const isInfoShow = ref(false);
 
     const tabValue = ref(0);
-    return { tabValue, btns, cardData, isInfoShow };
+
+    const onTap = () => {
+      navigateTo({ url: "../info/info" });
+    };
+    return { tabValue, btns, cardData, isInfoShow, onTap };
   }
 };
 </script>

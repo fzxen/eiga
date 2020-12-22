@@ -3,10 +3,10 @@ export default {
     "pages/welcome/welcome",
     "pages/campaign/campaign",
     "pages/login/login",
-    "pages/index/index",
     "pages/list/list",
     "pages/ticket/ticket",
-    "pages/me/me"
+    "pages/me/me",
+    "pages/info/info"
   ],
   entryPagePath: "pages/welcome/welcome",
   window: {

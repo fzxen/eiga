@@ -2,7 +2,7 @@
   "miniprogramRoot": "./dist",
   "projectname": "eiga-fe",
   "description": "电影票订购app",
-  "appid": "touristappid",
+  "appid": "wx90a5f655fdcff8a1",
   "setting": {
     "urlCheck": true,
     "es6": false,

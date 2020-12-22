@@ -1,7 +1,12 @@
 <template>
   <scroll-view :scrollY="true" class="card-list">
     <view :class="['card-wrap', type]">
-      <view class="card" v-for="c of data" :key="c.cover">
+      <view
+        class="card"
+        v-for="c of data"
+        :key="c.cover"
+        @tap="$emit('on-tap', c)"
+      >
         <view
           class="img-container"
           :style="{ 'background-image': `url(${c.cover})` }"
