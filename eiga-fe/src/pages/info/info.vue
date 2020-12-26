@@ -24,7 +24,7 @@
       </view>
     </view>
     <view class="btn-wrap">
-      <EButton class="btn">Get Tickets</EButton>
+      <EButton class="btn" @tap="onGetTickets">Get Tickets</EButton>
     </view>
   </view>
 </template>
@@ -33,6 +33,7 @@
 import { ref } from "vue";
 import VideoSwitcher from "./components/VideoSwitcher.vue";
 import BackArrow from "../../components/BackArrow.vue";
+import { navigateTo } from "@tarojs/taro";
 
 export default {
   name: "Info",
@@ -41,7 +42,10 @@ export default {
 
   setup() {
     const videoNum = ref(0);
-    return { videoNum };
+    const onGetTickets = () => {
+      navigateTo({ url: "../showtime/showtime" });
+    };
+    return { videoNum, onGetTickets };
   }
 };
 </script>
