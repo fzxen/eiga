@@ -11,7 +11,7 @@
       <TimeCheck check-title="DIGITAL" v-model="checkTime2" />
     </view>
 
-    <EButton class="button">NEXT</EButton>
+    <EButton class="button" @tap="onNext">NEXT</EButton>
   </view>
 </template>
 
@@ -19,6 +19,7 @@
 import { ref } from "vue";
 import DateSelect from "./components/DateSelect.vue";
 import TimeCheck from "./components/TimeCheck.vue";
+import { navigateTo } from '@tarojs/taro';
 
 export default {
   name: "ShowTime",
@@ -28,7 +29,11 @@ export default {
   setup() {
     const checkTime = ref("2");
     const checkTime2 = ref("2");
-    return { checkTime, checkTime2 };
+
+    const onNext = () => {
+      navigateTo({url: "../ticket-type/ticket-type"})
+    }
+    return { checkTime, checkTime2, onNext };
   }
 };
 </script>

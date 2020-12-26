@@ -7,7 +7,8 @@ export default {
     "pages/ticket/ticket",
     "pages/me/me",
     "pages/info/info",
-    "pages/showtime/showtime"
+    "pages/showtime/showtime",
+    "pages/ticket-type/ticket-type",
   ],
   entryPagePath: "pages/welcome/welcome",
   window: {
