@@ -13,8 +13,8 @@
     "noUnusedParameters": true,
     "strictNullChecks": true,
     "sourceMap": true,
-    "baseUrl": ".",
-    "rootDir": ".",
+    "baseUrl": "./",
+    "rootDir": "./",
     "jsx": "react",
     "allowJs": true,
     "resolveJsonModule": true,
@@ -22,7 +22,12 @@
       "node_modules/@types",
       "@types/global.d.ts",
       "@types"
-    ]
+    ],
+    "paths": {
+      "_images/*": [
+        "./src/assets/images/*"
+      ]
+    }
   },
   "exclude": [
     "node_modules",

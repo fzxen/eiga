@@ -12,13 +12,14 @@
       <text class="total">Total</text>
     </view>
 
-    <EButton class="button">NEXT</EButton>
+    <EButton class="button" @tap="onNext">NEXT</EButton>
   </view>
 </template>
 
 <script lang="ts">
 import { computed, ref } from "vue";
 import TicketCount from "./components/TicketCount.vue";
+import { navigateTo } from '@tarojs/taro';
 
 export default {
   name: "TicketType",
@@ -42,7 +43,11 @@ export default {
         senior.value * price.senior;
       return total.toFixed(2);
     });
-    return { adult, child, senior, totalPrice };
+
+    const onNext = () => {
+      navigateTo({url: "../seat/seat"})
+    }
+    return { adult, child, senior, totalPrice, onNext };
   }
 };
 </script>
