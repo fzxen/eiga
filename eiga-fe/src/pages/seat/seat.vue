@@ -24,6 +24,7 @@
 <script lang="ts">
 import {} from "vue";
 import SeatList from "./components/SeatList.vue";
+import { navigateTo } from '@tarojs/taro';
 
 export default {
   name: "Seat",
@@ -31,7 +32,9 @@ export default {
   components: { SeatList },
 
   setup() {
-    const onNext = () => {};
+    const onNext = () => {
+      navigateTo({url: "../pay/pay"})
+    };
     return { onNext };
   }
 };

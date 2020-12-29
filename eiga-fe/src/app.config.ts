@@ -10,6 +10,7 @@ export default {
     "pages/showtime/showtime",
     "pages/ticket-type/ticket-type",
     "pages/seat/seat",
+    "pages/pay/pay",
   ],
   entryPagePath: "pages/welcome/welcome",
   window: {
