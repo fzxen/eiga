@@ -1,5 +1,5 @@
 <template>
-  <view :class="['button-wrap', 'flex-center', `${type}-btn`]">
+  <view :class="['button-wrap', 'flex-center', `${type}-btn`]" @tap.stop="$emit('tap')">
     <slot>{{ text }}</slot>
   </view>
 </template>
