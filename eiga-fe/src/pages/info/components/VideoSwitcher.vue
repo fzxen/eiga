@@ -10,7 +10,7 @@
       <swiper-item class="swiper-item" v-for="i of 3" :key="i" :itemid="i">
         <video
           class="videos"
-          src="_videos/movie.mp4"
+          src="http://vjs.zencdn.net/v/oceans.mp4"
           :muted="true"
           :controls="true"
         />

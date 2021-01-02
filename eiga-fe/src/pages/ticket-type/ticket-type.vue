@@ -2,9 +2,9 @@
   <view class="ticket-type-wrap container">
     <view class="title flex-center">TICKET TYPE</view>
     <view class="counts">
-      <TicketCount type="ADULT" sub="" price="14.50" v-model="adult" />
-      <TicketCount type="CHILD" sub="Age 2-12" price="11.25" v-model="child" />
-      <TicketCount type="SENIOR" sub="Age 60+" price="12.50" v-model="senior" />
+      <TicketCount type="ADULT" sub="" :price="14.50" v-model="adult" />
+      <TicketCount type="CHILD" sub="Age 2-12" :price="11.25" v-model="child" />
+      <TicketCount type="SENIOR" sub="Age 60+" :price="12.50" v-model="senior" />
     </view>
 
     <view class="total-price flex-center">

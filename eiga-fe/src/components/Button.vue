@@ -8,7 +8,9 @@
 import {} from "vue";
 
 export default {
-  name: "Button",
+  name: "EButton",
+
+  emits: ["tap"],
 
   props: {
     text: String,

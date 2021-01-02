@@ -1,0 +1,13 @@
+{
+  "globalComponents": [
+    {
+      "EButton": {
+        "moduleName": "./src/components/Button.vue"
+      }
+    }, {
+      "ETabBar": {
+        "moduleName": "./src/components/Tabbar.vue"
+      }
+    }
+  ]
+}

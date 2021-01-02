@@ -26,7 +26,7 @@ export default {
 <style lang="scss">
 .ticket-wrap {
   .title {
-    margin-top: 29px;
+    margin-top: 15px;
     text-align: center;
     font-family: Montserrat-Bold;
     font-size: 24px;
@@ -36,7 +36,6 @@ export default {
     width: 100%;
     height: 565px;
     box-sizing: border-box;
-    margin-top: 30px;
 
     .card {
       margin: 16px;
