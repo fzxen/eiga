@@ -5,6 +5,8 @@ import "./app.scss";
 
 import Button from "./components/Button.vue";
 import TabBar from "./components/TabBar.vue";
+import Drawer from "./components/Drawer.vue";
+import EInput from "./components/EInput.vue";
 
 const App = createApp({
   onShow(options) {}
@@ -13,6 +15,8 @@ const App = createApp({
 
 App.use(store)
   .component("EButton", Button)
-  .component("ETabBar", TabBar);
+  .component("ETabBar", TabBar)
+  .component("Drawer", Drawer)
+  .component("EInput", EInput);
 
 export default App;

@@ -48,6 +48,7 @@ export default {
   .actived {
     font-size: 24px;
     color: #3e5883;
+    opacity: 1;
   }
 }
 </style>
