@@ -11,6 +11,7 @@ export default {
     "pages/ticket-type/ticket-type",
     "pages/seat/seat",
     "pages/pay/pay",
+    "pages/setting/setting",
   ],
   entryPagePath: "pages/welcome/welcome",
   window: {

@@ -3,6 +3,11 @@
     class="me-wrap tab-container"
     :style="{ backgroundImage: `url(${avatarBg})` }"
   >
+    <image
+      class="settings pointer"
+      src="~_images/setting.png"
+      @tap="goToSetting"
+    />
     <view class="me-inner">
       <view class="me-name">
         <text class="name">JOANNA MURPHY</text>
@@ -45,6 +50,7 @@ import PayCard from "./components/PayCard.vue";
 
 import EditProfile from "./components/EditProfile.vue";
 import AddCard from "./components/AddCard.vue";
+import { navigateTo } from "@tarojs/taro";
 
 export default {
   name: "Me",
@@ -70,7 +76,18 @@ export default {
 
     const showEditProfile = ref(false);
     const showAddCard = ref(false);
-    return { avatarBg, menus, activedMenu, showEditProfile, showAddCard };
+
+    const goToSetting = () => {
+      navigateTo({ url: "../setting/setting" });
+    };
+    return {
+      avatarBg,
+      menus,
+      activedMenu,
+      showEditProfile,
+      showAddCard,
+      goToSetting
+    };
   }
 };
 </script>
@@ -81,6 +98,14 @@ export default {
   // flex-direction: column;
   background-repeat: no-repeat;
   background-position: 0 -18px;
+
+  .settings {
+    position: fixed;
+    top: 30px;
+    right: 35px;
+    width: 24px;
+    height: 24px;
+  }
 
   .me-inner {
     background: linear-gradient(

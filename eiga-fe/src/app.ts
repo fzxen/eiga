@@ -7,6 +7,7 @@ import Button from "./components/Button.vue";
 import TabBar from "./components/TabBar.vue";
 import Drawer from "./components/Drawer.vue";
 import EInput from "./components/EInput.vue";
+import ESwitch from "./components/Switch.vue";
 
 const App = createApp({
   onShow(options) {}
@@ -17,6 +18,7 @@ App.use(store)
   .component("EButton", Button)
   .component("ETabBar", TabBar)
   .component("Drawer", Drawer)
-  .component("EInput", EInput);
+  .component("EInput", EInput)
+  .component("ESwitch", ESwitch)
 
 export default App;
