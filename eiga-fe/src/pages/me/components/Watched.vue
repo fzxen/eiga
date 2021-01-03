@@ -1,5 +1,10 @@
 <template>
-  <view class="watched-wrap"></view>
+  <view class="watched-wrap">
+    <view class="card" v-for="i of 5" :key="i">
+      <image src="~_images/poster2.png" />
+      <text>WONDER WOMAN</text>
+    </view>
+  </view>
 </template>
 
 <script lang="ts">
@@ -15,5 +20,25 @@ export default {
 </script>
 
 <style lang="scss">
-.watched-wrap {}
+.watched-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 16px;
+  .card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    image {
+      width: 160px;
+      height: 200px;
+    }
+    text {
+      margin-top: 17px;
+      font-family: Montserrat-ExtraBold;
+      font-size: 14px;
+      color: #607395;
+    }
+  }
+}
 </style>

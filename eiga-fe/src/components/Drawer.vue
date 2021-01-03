@@ -1,5 +1,5 @@
 <template>
-  <view :class="['drawer-wrap', { show: modelValue }]">
+  <view :class="['drawer-wrap', { show: modelValue, half }]">
     <image class="arrow" src="~_images/arrow_up.png" @tap="$emit('on-hide')" />
     <slot></slot>
   </view>
@@ -12,7 +12,8 @@ export default {
   name: "Drawer",
 
   props: {
-    modelValue: Boolean
+    modelValue: Boolean,
+    half: Boolean
   },
 
   setup() {
@@ -28,12 +29,16 @@ export default {
   right: 0;
   top: 0;
   bottom: 0;
-  transform: translateY(100vh);
+  transform: translateY(-100vh);
   transition: transform 0.3s ease-in-out;
 
   display: flex;
   flex-direction: column;
   padding: 0 35px;
+
+  &.half {
+    bottom: 30%
+  }
   .arrow {
     align-self: center;
     margin-top: 30px;

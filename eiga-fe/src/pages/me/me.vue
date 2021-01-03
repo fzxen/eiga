@@ -3,22 +3,34 @@
     class="me-wrap tab-container"
     :style="{ backgroundImage: `url(${avatarBg})` }"
   >
-    <view class="me-name">
-      <text class="name">JOANNA MURPHY</text>
-      <text class="address">New York, NY</text>
-    </view>
-    <view class="switcher-wrap-out flex-center">
-      <Switcher class="switcher" :btns="menus" v-model="activedMenu" />
-    </view>
+    <view class="me-inner">
+      <view class="me-name">
+        <text class="name">JOANNA MURPHY</text>
+        <text class="address">New York, NY</text>
+      </view>
+      <view class="switcher-wrap-out flex-center">
+        <Switcher class="switcher" :btns="menus" v-model="activedMenu" />
+      </view>
 
-    <swiper class="swiper" :current="activedMenu">
-      <swiper-item> <Watched /> </swiper-item>
-      <swiper-item> <MyInfo @profile-edit="showEditProfile = true"/> </swiper-item>
-      <swiper-item> <PayCard /> </swiper-item>
-    </swiper>
+      <!-- <swiper class="swiper" :current="activedMenu">
+        <swiper-item> <Watched /> </swiper-item>
+        <swiper-item>
+          <MyInfo @profile-edit="showEditProfile = true" />
+        </swiper-item>
+        <swiper-item> <PayCard /> </swiper-item>
+      </swiper> -->
+      <view class="element">
+        <component
+          :is="activedMenu"
+          @profile-edit="showEditProfile = true"
+          @card-add="showAddCard = true"
+        />
+      </view>
+    </view>
     <ETabBar />
 
     <EditProfile v-model="showEditProfile" />
+    <AddCard v-model="showAddCard" />
   </view>
 </template>
 
@@ -32,42 +44,53 @@ import Watched from "./components/Watched.vue";
 import PayCard from "./components/PayCard.vue";
 
 import EditProfile from "./components/EditProfile.vue";
+import AddCard from "./components/AddCard.vue";
 
 export default {
   name: "Me",
 
-  components: { Switcher, MyInfo, Watched, PayCard, EditProfile },
+  components: { Switcher, MyInfo, Watched, PayCard, EditProfile, AddCard },
 
   setup() {
     const menus = reactive([
       {
-        id: 0,
+        id: "Watched",
         text: "WATCHED"
       },
       {
-        id: 1,
+        id: "MyInfo",
         text: "MY INFO"
       },
       {
-        id: 2,
+        id: "PayCard",
         text: "PAY CARD"
       }
     ]);
-    const activedMenu = ref(1);
+    const activedMenu = ref("Watched");
 
     const showEditProfile = ref(false);
-    return { avatarBg, menus, activedMenu, showEditProfile };
+    const showAddCard = ref(false);
+    return { avatarBg, menus, activedMenu, showEditProfile, showAddCard };
   }
 };
 </script>
 
 <style lang="scss">
 .me-wrap {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   background-repeat: no-repeat;
   background-position: 0 -18px;
 
+  .me-inner {
+    background: linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 60px,
+      rgba(238, 242, 245, 1) 100px,
+      rgba(238, 242, 245, 1) 100%
+    );
+  }
   .me-name {
     display: flex;
     flex-direction: column;
@@ -94,11 +117,6 @@ export default {
   }
   .switcher-wrap-out {
     height: 80px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgba(238, 242, 245, 1) 50% rgba(238, 242, 245, 1) 100%
-    );
     .switcher {
       display: block;
       text-align: center;
@@ -106,7 +124,9 @@ export default {
   }
 
   .swiper {
-    flex: 1;
+    // height: auto;
+    min-height: 225px;
+    // min-height: 1005px;
   }
 }
 </style>
