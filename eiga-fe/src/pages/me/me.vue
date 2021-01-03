@@ -1,8 +1,6 @@
 <template>
-  <view
-    class="me-wrap tab-container"
-    :style="{ backgroundImage: `url(${avatarBg})` }"
-  >
+  <view class="me-wrap tab-container">
+    <image class="avatar-bg" :src="avatarBg" />
     <image
       class="settings pointer"
       src="~_images/setting.png"
@@ -33,10 +31,9 @@
       </view>
     </view>
     <ETabBar />
-
-    <EditProfile v-model="showEditProfile" />
-    <AddCard v-model="showAddCard" />
   </view>
+  <EditProfile v-model="showEditProfile" :style="{zIndex: 2}" />
+  <AddCard v-model="showAddCard" :style="{zIndex: 2}" />
 </template>
 
 <script lang="ts">
@@ -99,6 +96,19 @@ export default {
   background-repeat: no-repeat;
   background-position: 0 -18px;
 
+  .avatar-bg {
+    position: fixed;
+    top: -18px;
+    left: 0;
+    width: 100%;
+    height: 57vh;
+    z-index: 0;
+  }
+
+  // & > *:not(.avatar-bg) {
+  //   z-index: 2;
+  // }
+
   .settings {
     position: fixed;
     top: 30px;
@@ -108,6 +118,8 @@ export default {
   }
 
   .me-inner {
+    position: relative;
+    margin-top: 40vh;
     background: linear-gradient(
       to bottom,
       transparent 0,
@@ -115,12 +127,12 @@ export default {
       rgba(238, 242, 245, 1) 100px,
       rgba(238, 242, 245, 1) 100%
     );
+    z-index: 2;
   }
   .me-name {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40vh;
     // background-image: linear-gradient(
     //   to bottom,
     //   transparent 0%,

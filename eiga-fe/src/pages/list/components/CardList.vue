@@ -7,10 +7,10 @@
         :key="c.cover"
         @tap="$emit('on-tap', c)"
       >
-        <view
-          class="img-container"
-          :style="{ 'background-image': `url(${c.cover})` }"
-        />
+        <view class="img-container">
+          <image :src="c.cover" />
+        </view>
+
         <text class="title">{{ c.title }}</text>
         <text class="release">{{ c.release }}</text>
       </view>
@@ -92,6 +92,11 @@ export default {
       background-position: center;
       border-radius: 10px;
       box-shadow: 1px 5px 5px #cccccc;
+
+      image {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     .title,

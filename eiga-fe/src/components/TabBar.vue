@@ -62,6 +62,7 @@ export default {
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 2;
 
   display: flex;
   justify-content: space-around;
@@ -79,6 +80,7 @@ export default {
   .icon {
     width: 22px;
     height: 22px;
+    padding: 20px;
   }
 }
 </style>

@@ -1,12 +1,8 @@
 <template>
   <view class="ticketcard-wrap" @tap="showInfo = true">
     <view class="ticket-top">
-      <view
-        class="left"
-        :style="{
-          backgroundImage: `url(${cover})`
-        }"
-      >
+      <view class="left">
+        <image :src="cover" />
       </view>
       <view class="right">
         <text class="right__title">BLACK PANTHER</text>
