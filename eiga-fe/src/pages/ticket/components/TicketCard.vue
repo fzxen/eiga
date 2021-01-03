@@ -132,6 +132,7 @@ export default {
       right: 28px;
       width: 4px;
       height: 18px;
+      padding: 0 6px;
     }
   }
 
