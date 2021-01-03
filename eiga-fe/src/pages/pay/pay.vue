@@ -23,7 +23,7 @@
     </view>
 
     <view class="btn">
-      <EButton>Traditional Payment</EButton>
+      <EButton @tap="onPayment">Traditional Payment</EButton>
     </view>
   </view>
 </template>
@@ -33,6 +33,7 @@ import ESwitch from "../../components/Switch.vue";
 import Bankcard from "../../components/Bankcard.vue";
 
 import { ref } from "vue";
+import { switchTab } from "@tarojs/taro";
 
 export default {
   name: "Pay",
@@ -41,7 +42,11 @@ export default {
 
   setup() {
     const usePromo = ref(false);
-    return { usePromo };
+
+    const onPayment = () => {
+      switchTab({ url: "../ticket/ticket" });
+    };
+    return { usePromo, onPayment };
   }
 };
 </script>
